@@ -23,4 +23,5 @@ WORKDIR /go/src/hcl2-parser
 RUN gopherjs build parser.go -o index.js -m
 
 COPY build/copy-out.sh .
+RUN chmod +x copy-out.sh
 ENTRYPOINT ["/go/src/hcl2-parser/copy-out.sh"]
