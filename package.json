@@ -1,0 +1,17 @@
+{
+  "name": "hcl2parser",
+  "version": "1.0.0",
+  "description": "HCL v2 parser for JavaScript",
+  "main": "dist/index.js",
+  "repository": {
+    "url": "https://github.com/ckndave/hcl2json.git",
+    "type": "git"
+  },
+  "keywords": [
+    "terraform",
+    "hcl",
+    "json"
+  ],
+  "author": "Chintan Dave",
+  "license": "MIT"
+}
