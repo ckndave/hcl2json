@@ -1,6 +1,8 @@
 package main
 
 import (
+	"encoding/json"
+
 	"github.com/ckndave/hclparser/convert"
 	"github.com/gopherjs/gopherjs/js"
 )
@@ -12,11 +14,12 @@ func main() {
 
 // Parse a HCL string into a JSON string
 func parseToString(input string) (output string, err error) {
-	convertedBytes, err := convert.Bytes([]byte(input), "", convert.Options{})
+	convertedBytes, err := convert.String(input)
 	if err != nil {
 		return "", err
 	}
-	output = string(convertedBytes)
+	bytes, _ := json.Marshal(convertedBytes)
+	output = string(bytes)
 	return output, nil
 }
 
